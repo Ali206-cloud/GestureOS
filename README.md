@@ -56,8 +56,6 @@ numpy
 ## Usage
 
 ```bash
-python hand_gesture_control.py
-```
 
 A window opens with the webcam feed and hand landmarks overlaid. The detected action and FPS are shown in the top-left corner.
 
@@ -65,9 +63,13 @@ A window opens with the webcam feed and hand landmarks overlaid. The detected ac
 
 MediaPipe detects 21 hand landmarks per frame, which determine which fingers are extended. Finger patterns map to actions — quick gestures (clicks, scrolling) fire instantly, while disruptive ones require a brief hold to confirm. PyAutoGUI then simulates the corresponding mouse or keyboard action.
 
+## Tuning
+
+All timing and sensitivity values (hold times, pinch distances, cooldowns, mouse smoothing) live as labeled constants near the top of `gesture_control.py`, so you can adjust responsiveness without touching any logic.
+
 ## Roadmap
 
 - Cross-platform shortcut mapping
 - Configurable gesture bindings
 - Two-hand gesture support
-  xD ;) 
+xD ;)
